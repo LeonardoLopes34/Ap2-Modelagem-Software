@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "d3jPYRTNrIU=",
+  "success": true,
+  "projectFilePath": "C:\\Leo\\ap2-Modelagem-Software\\Ap2\\Ap2.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\dudul\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.3\\microsoft.aspnetcore.openapi.9.0.3.nupkg.sha512",
+    "C:\\Users\\dudul\\.nuget\\packages\\microsoft.openapi\\1.6.17\\microsoft.openapi.1.6.17.nupkg.sha512"
+  ],
+  "logs": []
+}
