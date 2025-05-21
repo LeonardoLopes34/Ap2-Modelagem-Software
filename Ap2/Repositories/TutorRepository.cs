@@ -1,33 +1,45 @@
 
+using Microsoft.EntityFrameworkCore;
+
 public class TutorRepository : ITutorRepository
 {
-    public Task<Tutor> AddTutorAsync(Tutor tutor)
+    private readonly AppDbContext _context;
+
+    public TutorRepository(AppDbContext context)
     {
-        throw new NotImplementedException();
+        _context = context;
+    }
+    public async Task<Tutor?> AddTutorAsync(Tutor tutor)
+    {
+        _context.Tutores.Add(tutor);
+        await _context.SaveChangesAsync();
+        return tutor;
     }
 
-    public Task DeleteAsync(int id)
+    public async Task DeleteAsync(int id)
     {
-        throw new NotImplementedException();
+        var tutor = await getByIdAsync(id);
+        if (tutor == null) return;
+        _context.Tutores.Remove(tutor);
+        await _context.SaveChangesAsync();
     }
 
-    public Task<IEnumerable<Tutor>> getAllAsync()
-    {
-        throw new NotImplementedException();
-    }
+    public async Task<IEnumerable<Tutor>> getAllAsync() =>
+     await _context.Tutores.ToListAsync();
 
-    public Task<Tutor> getByIdAsync(int Id)
+    public async Task<Tutor?> getByIdAsync(int Id)
     {
-        throw new NotImplementedException();
+        var tutor = await _context.Tutores.FindAsync(Id) ?? throw new KeyNotFoundException($"Tutor com ID {Id} não foi encontrado.");
+        return tutor;
     }
-
-    public Task<Tutor> getByNameAsync(string? name)
+    public async Task<Tutor?> getByNameAsync(string? name)
     {
-        throw new NotImplementedException();
+        var tutor = await _context.Tutores.FindAsync(name) ?? throw new KeyNotFoundException($"Tutor com o nome {name} não foi encontrado.");
+        return tutor;
     }
-
-    public Task UpdateAsync(Tutor tutor)
+    public async Task UpdateAsync(Tutor tutor)
     {
-        throw new NotImplementedException();
+        _context.Update(tutor);
+        await _context.SaveChangesAsync();
     }
 }
