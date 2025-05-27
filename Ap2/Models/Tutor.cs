@@ -6,5 +6,5 @@ public class Tutor
     public required string Name { get; set; }
     public string? Telefone { get; set; }
     public string? Email { get; set; }
-    public required ICollection<Pet> Pets { get; set; }
+    public ICollection<Pet>? Pets { get; set; }
 }

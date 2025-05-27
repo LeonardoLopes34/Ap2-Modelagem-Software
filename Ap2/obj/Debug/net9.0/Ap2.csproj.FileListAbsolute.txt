@@ -2,6 +2,10 @@ F:\Leo\5 Semestre\MODELAGEM\Ap2-Modelagem-Software\Ap2\bin\Debug\net9.0\appsetti
 F:\Leo\5 Semestre\MODELAGEM\Ap2-Modelagem-Software\Ap2\bin\Debug\net9.0\appsettings.json
 F:\Leo\5 Semestre\MODELAGEM\Ap2-Modelagem-Software\Ap2\bin\Debug\net9.0\Ap2.staticwebassets.endpoints.json
 F:\Leo\5 Semestre\MODELAGEM\Ap2-Modelagem-Software\Ap2\bin\Debug\net9.0\Ap2.exe
+F:\Leo\5 Semestre\MODELAGEM\Ap2-Modelagem-Software\Ap2\bin\Debug\net9.0\Ap2.deps.json
+F:\Leo\5 Semestre\MODELAGEM\Ap2-Modelagem-Software\Ap2\bin\Debug\net9.0\Ap2.runtimeconfig.json
+F:\Leo\5 Semestre\MODELAGEM\Ap2-Modelagem-Software\Ap2\bin\Debug\net9.0\Ap2.dll
+F:\Leo\5 Semestre\MODELAGEM\Ap2-Modelagem-Software\Ap2\bin\Debug\net9.0\Ap2.pdb
 F:\Leo\5 Semestre\MODELAGEM\Ap2-Modelagem-Software\Ap2\bin\Debug\net9.0\Humanizer.dll
 F:\Leo\5 Semestre\MODELAGEM\Ap2-Modelagem-Software\Ap2\bin\Debug\net9.0\Microsoft.AspNetCore.OpenApi.dll
 F:\Leo\5 Semestre\MODELAGEM\Ap2-Modelagem-Software\Ap2\bin\Debug\net9.0\Microsoft.Bcl.AsyncInterfaces.dll
@@ -151,9 +155,5 @@ F:\Leo\5 Semestre\MODELAGEM\Ap2-Modelagem-Software\Ap2\obj\Debug\net9.0\Ap2.cspr
 F:\Leo\5 Semestre\MODELAGEM\Ap2-Modelagem-Software\Ap2\obj\Debug\net9.0\Ap2.dll
 F:\Leo\5 Semestre\MODELAGEM\Ap2-Modelagem-Software\Ap2\obj\Debug\net9.0\refint\Ap2.dll
 F:\Leo\5 Semestre\MODELAGEM\Ap2-Modelagem-Software\Ap2\obj\Debug\net9.0\Ap2.pdb
-F:\Leo\5 Semestre\MODELAGEM\Ap2-Modelagem-Software\Ap2\bin\Debug\net9.0\Ap2.deps.json
-F:\Leo\5 Semestre\MODELAGEM\Ap2-Modelagem-Software\Ap2\bin\Debug\net9.0\Ap2.runtimeconfig.json
-F:\Leo\5 Semestre\MODELAGEM\Ap2-Modelagem-Software\Ap2\bin\Debug\net9.0\Ap2.dll
-F:\Leo\5 Semestre\MODELAGEM\Ap2-Modelagem-Software\Ap2\bin\Debug\net9.0\Ap2.pdb
 F:\Leo\5 Semestre\MODELAGEM\Ap2-Modelagem-Software\Ap2\obj\Debug\net9.0\Ap2.genruntimeconfig.cache
 F:\Leo\5 Semestre\MODELAGEM\Ap2-Modelagem-Software\Ap2\obj\Debug\net9.0\ref\Ap2.dll

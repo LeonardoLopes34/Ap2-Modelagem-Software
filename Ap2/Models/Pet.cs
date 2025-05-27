@@ -8,6 +8,6 @@ public class Pet
     public required string Race { get; set; }
     public required int TutorId { get; set; }
 
-     [JsonIgnore]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingDefault)]
     public Tutor? Tutor { get; set; }
 }

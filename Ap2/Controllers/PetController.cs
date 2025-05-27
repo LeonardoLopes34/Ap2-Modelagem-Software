@@ -1,3 +1,4 @@
+using Ap2.Models.Dtos;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Ap2.Controllers
@@ -16,7 +17,7 @@ namespace Ap2.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Pet>>> GetAll()
         {
-            var pets = await _petRepository.getAllAsync();
+            var pets = await _petRepository.GetAllAsync();
             return Ok(pets);
         }
 
@@ -25,7 +26,7 @@ namespace Ap2.Controllers
         {
             try
             {
-                var pet = await _petRepository.getByIdAsync(id);
+                var pet = await _petRepository.GetByIdAsync(id);
                 return Ok(pet);
             }
             catch (KeyNotFoundException)
@@ -39,7 +40,7 @@ namespace Ap2.Controllers
         {
             try
             {
-                var pet = await _petRepository.getByNameAsync(name);
+                var pet = await _petRepository.GetByNameAsync(name);
                 return Ok(pet);
             }
             catch (KeyNotFoundException)
@@ -62,7 +63,7 @@ namespace Ap2.Controllers
             }
         }
 
-        [HttpDelete ("{id}")]
+        [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
             try
@@ -77,12 +78,22 @@ namespace Ap2.Controllers
         }
 
         [HttpPut]
-        public async Task<ActionResult<Pet>> Put(Pet pet)
+        public async Task<ActionResult> Put([FromBody] PetDto petDto)
         {
             try
             {
-                await _petRepository.UpdateAsync(pet);
-                return Ok(new { message = $"Pet '{pet.Name}' atualizado com sucesso. ", pet });
+                // Buscar o pet original no banco
+                var existingPet = await _petRepository.GetIdEntity(petDto.Id);
+
+                // Atualizar os campos
+                existingPet.Name = petDto.Name;
+                existingPet.Specie = petDto.Specie;
+                existingPet.Race = petDto.Race;
+                existingPet.TutorId = petDto.TutorId;
+
+                await _petRepository.UpdateAsync(existingPet);
+
+                return Ok(new { message = $"Pet '{existingPet.Name}' atualizado com sucesso.", pet = petDto });
             }
             catch (KeyNotFoundException)
             {

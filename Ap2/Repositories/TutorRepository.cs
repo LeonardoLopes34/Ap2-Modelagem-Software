@@ -33,12 +33,12 @@ public class TutorRepository : ITutorRepository
 
     public async Task<Tutor> getByIdAsync(int id)
     {
-        var tutor = await _context.Tutores.FindAsync(id) ?? throw new KeyNotFoundException($"Tutor com ID {id} não foi encontrado.");
+        var tutor = await _context.Tutores.Include(p => p.Pets).FirstOrDefaultAsync(t => t.Id == id) ?? throw new KeyNotFoundException($"Tutor com ID {id} não foi encontrado.");
         return tutor;
     }
-    public async Task<Tutor> getByNameAsync(string? name)
+    public async Task<Tutor> getByNameAsync(string name)
     {
-        var tutor = await _context.Tutores.FindAsync(name) ?? throw new KeyNotFoundException($"Tutor com o nome {name} não foi encontrado.");
+        var tutor = await _context.Tutores.Include(p => p.Pets).FirstOrDefaultAsync(t => t.Name == name) ?? throw new KeyNotFoundException($"Tutor com o nome {name} não foi encontrado");
         return tutor;
     }
     public async Task UpdateAsync(Tutor tutor)
