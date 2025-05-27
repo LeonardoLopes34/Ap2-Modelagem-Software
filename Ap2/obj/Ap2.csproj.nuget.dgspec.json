@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Leo\\ap2-Modelagem-Software\\Ap2\\Ap2.csproj": {}
+    "F:\\Leo\\5 Semestre\\MODELAGEM\\Ap2-Modelagem-Software\\Ap2\\Ap2.csproj": {}
   },
   "projects": {
-    "C:\\Leo\\ap2-Modelagem-Software\\Ap2\\Ap2.csproj": {
+    "F:\\Leo\\5 Semestre\\MODELAGEM\\Ap2-Modelagem-Software\\Ap2\\Ap2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Leo\\ap2-Modelagem-Software\\Ap2\\Ap2.csproj",
+        "projectUniqueName": "F:\\Leo\\5 Semestre\\MODELAGEM\\Ap2-Modelagem-Software\\Ap2\\Ap2.csproj",
         "projectName": "Ap2",
-        "projectPath": "C:\\Leo\\ap2-Modelagem-Software\\Ap2\\Ap2.csproj",
-        "packagesPath": "C:\\Users\\dudul\\.nuget\\packages\\",
-        "outputPath": "C:\\Leo\\ap2-Modelagem-Software\\Ap2\\obj\\",
+        "projectPath": "F:\\Leo\\5 Semestre\\MODELAGEM\\Ap2-Modelagem-Software\\Ap2\\Ap2.csproj",
+        "packagesPath": "C:\\Users\\Edu\\.nuget\\packages\\",
+        "outputPath": "F:\\Leo\\5 Semestre\\MODELAGEM\\Ap2-Modelagem-Software\\Ap2\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\dudul\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Edu\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
@@ -57,6 +57,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[9.0.5, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[8.1.1, )"
             }
           },
           "imports": [
@@ -78,7 +82,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.202/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

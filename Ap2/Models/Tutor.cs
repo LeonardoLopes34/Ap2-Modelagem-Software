@@ -1,7 +1,10 @@
+using System.Text.Json.Serialization;
+
 public class Tutor
 {
     public int Id { get; set; }
-    public required String Name { get; set; }
-    public int? Telefone { get; set; }
-    public String? Email { get; set; }
+    public required string Name { get; set; }
+    public string? Telefone { get; set; }
+    public string? Email { get; set; }
+    public required ICollection<Pet> Pets { get; set; }
 }
