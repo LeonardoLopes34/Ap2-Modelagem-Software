@@ -48,18 +48,25 @@ namespace Ap2.Controllers
                 return NotFound(new { message = $"Pet com nome {name} não encontrado." });
             }
         }
-
         [HttpPost]
-        public async Task<ActionResult<Pet>> Post(Pet pet)
+        public async Task<ActionResult> Post([FromBody] PetDto petDto)
         {
             try
             {
+                var pet = new Pet
+                {
+                    Name = petDto.Name,
+                    Specie = petDto.Specie,
+                    Race = petDto.Race,
+                    TutorId = petDto.TutorId
+                };
+
                 var newPet = await _petRepository.AddPetAsync(pet);
                 return CreatedAtAction(nameof(GetById), new { id = newPet.Id }, newPet);
             }
             catch (ArgumentNullException)
             {
-                return BadRequest("Pet enviado não é valido.");
+                return BadRequest("Pet enviado não é válido.");
             }
         }
 
