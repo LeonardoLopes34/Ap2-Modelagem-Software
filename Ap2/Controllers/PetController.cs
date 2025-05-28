@@ -89,10 +89,9 @@ namespace Ap2.Controllers
         {
             try
             {
-                // Buscar o pet original no banco
+
                 var existingPet = await _petRepository.GetIdEntity(petDto.Id);
 
-                // Atualizar os campos
                 existingPet.Name = petDto.Name;
                 existingPet.Specie = petDto.Specie;
                 existingPet.Race = petDto.Race;
